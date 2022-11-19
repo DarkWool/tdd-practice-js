@@ -1,5 +1,7 @@
-function capitalize(string) {
-    return string[0].toUpperCase() + string.slice(1);
+function capitalize(str) {
+    if (typeof str !== "string") return;
+
+    return str[0].toUpperCase() + str.slice(1);
 }
 
 export {
