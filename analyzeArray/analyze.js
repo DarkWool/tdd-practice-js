@@ -1,4 +1,6 @@
 function analyzeArray(arr) {
+    if (Array.isArray(arr) === false) return;
+
     const average = arr.reduce((num, total) => total + num) / arr.length;
     const min = Math.min(...arr);
     const max = Math.max(...arr);
