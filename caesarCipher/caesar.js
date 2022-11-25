@@ -13,7 +13,7 @@ function caesarCipher(str, key) {
             continue;
         }
         
-        let newChar = (((unicodeVal + key - lowestVal) % 26) + lowestVal);
+        let newChar = ((unicodeVal + key - lowestVal) % 26) + lowestVal;
         encryptedStr += String.fromCharCode(newChar);
     }
 
