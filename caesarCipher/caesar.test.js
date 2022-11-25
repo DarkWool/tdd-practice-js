@@ -20,6 +20,9 @@ test("Works with keys greater than 25", () => {
 
 test("Returns undefined with invalid arguments", () => {
     expect(caesarCipher()).toBeUndefined();
-    expect(caesarCipher(12312)).toBeUndefined();
+    expect(caesarCipher(12312, 2)).toBeUndefined();
     expect(caesarCipher(false, null)).toBeUndefined();
+    expect(caesarCipher(true, 10)).toBeUndefined();
+    expect(caesarCipher([0, "asdas", 199], 4)).toBeUndefined();
+    expect(caesarCipher({"prop": "String to return"}, 5)).toBeUndefined();
 });

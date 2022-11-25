@@ -1,5 +1,10 @@
 import { reverseString } from "./reverse.js";
 
+test("Returns the same string when there is only one character", () => {
+    expect(reverseString("A")).toMatch(/A/);
+    expect(reverseString("x")).toMatch(/x/);
+});
+
 test("Reverses a string successfully", () => {
     expect(reverseString("Hello world!")).toMatch("!dlrow olleH");
     expect(reverseString("Heroku should remain free.")).toMatch(".eerf niamer dluohs ukoreH");

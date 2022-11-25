@@ -1,6 +1,5 @@
 import { capitalize } from "./capitalize.js";
 
-// Takes a string and returns it with the first character capitalized
 test("Returns a short string with the first character capitalized", () => {
     expect(capitalize("short")).toMatch(/Short/);
     expect(capitalize("a red fox...")).toMatch(/A red fox.../);
@@ -18,5 +17,5 @@ test("Returns undefined when the argument is not a string", () => {
     expect(capitalize(true)).toBeUndefined();
     expect(capitalize(false)).toBeUndefined();
     expect(capitalize([])).toBeUndefined();
-    expect(capitalize({"prop": "hello"})).toBeUndefined();
+    expect(capitalize({"prop": "this is a string"})).toBeUndefined();
 });
